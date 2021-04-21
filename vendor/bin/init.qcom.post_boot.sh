@@ -1201,7 +1201,7 @@ case "$target" in
 
                 # Enable core control
 #                insmod /system/lib/modules/core_ctl.ko
-                echo 2 > /sys/devices/system/cpu/cpu0/core_ctl/min_cpus
+                echo 1 > /sys/devices/system/cpu/cpu0/core_ctl/min_cpus
                 echo 4 > /sys/devices/system/cpu/cpu0/core_ctl/max_cpus
                 echo 68 > /sys/devices/system/cpu/cpu0/core_ctl/busy_up_thres
                 echo 40 > /sys/devices/system/cpu/cpu0/core_ctl/busy_down_thres
@@ -1551,7 +1551,7 @@ case "$target" in
 
                 # Enable core control
                 #for 8976
-                echo 2 > /sys/devices/system/cpu/cpu4/core_ctl/min_cpus
+                echo 1 > /sys/devices/system/cpu/cpu4/core_ctl/min_cpus
                 echo 4 > /sys/devices/system/cpu/cpu4/core_ctl/max_cpus
                 echo 68 > /sys/devices/system/cpu/cpu4/core_ctl/busy_up_thres
                 echo 40 > /sys/devices/system/cpu/cpu4/core_ctl/busy_down_thres
@@ -2138,7 +2138,7 @@ case "$target" in
                 echo 83 > /proc/sys/kernel/sched_downmigrate
 
                 # Enable core control
-                echo 2 > /sys/devices/system/cpu/cpu0/core_ctl/min_cpus
+                echo 1 > /sys/devices/system/cpu/cpu0/core_ctl/min_cpus
                 echo 4 > /sys/devices/system/cpu/cpu0/core_ctl/max_cpus
                 echo 68 > /sys/devices/system/cpu/cpu0/core_ctl/busy_up_thres
                 echo 40 > /sys/devices/system/cpu/cpu0/core_ctl/busy_down_thres
@@ -2241,7 +2241,7 @@ case "$target" in
                      echo 1 > /sys/devices/system/cpu/cpu7/online
 
                      # Enable core control
-                     echo 2 > /sys/devices/system/cpu/cpu0/core_ctl/min_cpus
+                     echo 1 > /sys/devices/system/cpu/cpu0/core_ctl/min_cpus
                      echo 4 > /sys/devices/system/cpu/cpu0/core_ctl/max_cpus
                      echo 68 > /sys/devices/system/cpu/cpu0/core_ctl/busy_up_thres
                      echo 40 > /sys/devices/system/cpu/cpu0/core_ctl/busy_down_thres
@@ -2353,7 +2353,7 @@ case "$target" in
         case "$soc_id" in
                 "317" | "324" | "325" | "326" | "345" | "346" )
 
-            echo 2 > /sys/devices/system/cpu/cpu4/core_ctl/min_cpus
+            echo 1 > /sys/devices/system/cpu/cpu4/core_ctl/min_cpus
             echo 60 > /sys/devices/system/cpu/cpu4/core_ctl/busy_up_thres
             echo 30 > /sys/devices/system/cpu/cpu4/core_ctl/busy_down_thres
             echo 100 > /sys/devices/system/cpu/cpu4/core_ctl/offline_delay_ms
@@ -2688,7 +2688,7 @@ case "$target" in
 
       # Core control parameters on silver
       echo 0 0 0 0 1 1 > /sys/devices/system/cpu/cpu0/core_ctl/not_preferred
-      echo 4 > /sys/devices/system/cpu/cpu0/core_ctl/min_cpus
+      echo 1 > /sys/devices/system/cpu/cpu0/core_ctl/min_cpus
       echo 60 > /sys/devices/system/cpu/cpu0/core_ctl/busy_up_thres
       echo 40 > /sys/devices/system/cpu/cpu0/core_ctl/busy_down_thres
       echo 100 > /sys/devices/system/cpu/cpu0/core_ctl/offline_delay_ms
@@ -2810,7 +2810,7 @@ case "$target" in
 
       # Core control parameters on silver
       echo 0 0 0 0 1 1 > /sys/devices/system/cpu/cpu0/core_ctl/not_preferred
-      echo 4 > /sys/devices/system/cpu/cpu0/core_ctl/min_cpus
+      echo 1 > /sys/devices/system/cpu/cpu0/core_ctl/min_cpus
       echo 60 > /sys/devices/system/cpu/cpu0/core_ctl/busy_up_thres
       echo 40 > /sys/devices/system/cpu/cpu0/core_ctl/busy_down_thres
       echo 100 > /sys/devices/system/cpu/cpu0/core_ctl/offline_delay_ms
@@ -2926,7 +2926,7 @@ case "$target" in
 
             # Core control parameters on silver
             echo 0 0 0 0 1 1 > /sys/devices/system/cpu/cpu0/core_ctl/not_preferred
-            echo 4 > /sys/devices/system/cpu/cpu0/core_ctl/min_cpus
+            echo 1 > /sys/devices/system/cpu/cpu0/core_ctl/min_cpus
             echo 60 > /sys/devices/system/cpu/cpu0/core_ctl/busy_up_thres
             echo 40 > /sys/devices/system/cpu/cpu0/core_ctl/busy_down_thres
             echo 100 > /sys/devices/system/cpu/cpu0/core_ctl/offline_delay_ms
@@ -3072,7 +3072,7 @@ case "$target" in
             esac
 
       # Core control parameters on silver
-      echo 4 > /sys/devices/system/cpu/cpu0/core_ctl/min_cpus
+      echo 1 > /sys/devices/system/cpu/cpu0/core_ctl/min_cpus
       echo 60 > /sys/devices/system/cpu/cpu0/core_ctl/busy_up_thres
       echo 40 > /sys/devices/system/cpu/cpu0/core_ctl/busy_down_thres
       echo 100 > /sys/devices/system/cpu/cpu0/core_ctl/offline_delay_ms
@@ -3593,7 +3593,7 @@ case "$target" in
          ;;
         esac
 	# Core control parameters
-	echo 2 > /sys/devices/system/cpu/cpu4/core_ctl/min_cpus
+	echo 1 > /sys/devices/system/cpu/cpu4/core_ctl/min_cpus
 	echo 60 > /sys/devices/system/cpu/cpu4/core_ctl/busy_up_thres
 	echo 30 > /sys/devices/system/cpu/cpu4/core_ctl/busy_down_thres
 	echo 100 > /sys/devices/system/cpu/cpu4/core_ctl/offline_delay_ms
@@ -3711,14 +3711,14 @@ esac
 case "$target" in
     "msmnile")
 	# Core control parameters for gold
-	echo 2 > /sys/devices/system/cpu/cpu4/core_ctl/min_cpus
+	echo 1 > /sys/devices/system/cpu/cpu4/core_ctl/min_cpus
 	echo 60 > /sys/devices/system/cpu/cpu4/core_ctl/busy_up_thres
 	echo 30 > /sys/devices/system/cpu/cpu4/core_ctl/busy_down_thres
 	echo 100 > /sys/devices/system/cpu/cpu4/core_ctl/offline_delay_ms
 	echo 3 > /sys/devices/system/cpu/cpu4/core_ctl/task_thres
 
 	# Core control parameters for gold+
-	echo 0 > /sys/devices/system/cpu/cpu7/core_ctl/min_cpus
+	echo 1 > /sys/devices/system/cpu/cpu7/core_ctl/min_cpus
 	echo 60 > /sys/devices/system/cpu/cpu7/core_ctl/busy_up_thres
 	echo 30 > /sys/devices/system/cpu/cpu7/core_ctl/busy_down_thres
 	echo 100 > /sys/devices/system/cpu/cpu7/core_ctl/offline_delay_ms
@@ -3900,7 +3900,7 @@ esac
 case "$target" in
     "msm8998" | "apq8098_latv")
 
-	echo 2 > /sys/devices/system/cpu/cpu4/core_ctl/min_cpus
+	echo 1 > /sys/devices/system/cpu/cpu4/core_ctl/min_cpus
 	echo 60 > /sys/devices/system/cpu/cpu4/core_ctl/busy_up_thres
 	echo 30 > /sys/devices/system/cpu/cpu4/core_ctl/busy_down_thres
 	echo 100 > /sys/devices/system/cpu/cpu4/core_ctl/offline_delay_ms
@@ -4326,8 +4326,10 @@ setprop persist.vendor.mmi.misc_dev_path $real_path
 
 #enes4949
 
-echo '3596' > /sys/class/timed_output/vibrator/vmax_mv_strong # titresimi %100 gucte calistir
+echo '3596' > /sys/class/timed_output/vibrator/vmax_mv_strong # titresimi 100 gucte calistir
 echo 'fiops' > /sys/block/mmcblk0/queue/scheduler # data scheduler
 echo 'fiops' > /sys/block/mmcblk1/queue/scheduler # sd kart scheduler
 echo '0' > /sys/block/mmcblk0/queue/iostats 
 echo '0' > /sys/block/mmcblk0/queue/add_random
+echo '2' > /sys/devices/system/cpu/cpu0/core_ctl/max_cpus # big core sayısını 2 ile sınırla
+echo '1' > /sys/devices/system/cpu/cpu0/core_ctl/min_cpus # big core sayısını en az 1 yap
